@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>PhysiJS Experiment #1</title>
+    <style>
+      body { margin: 0; overflow: hidden; }
+      #shatter-container {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        display: flex;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2147483647;
+        overflow: hidden;
+      }
+      .shatter {
+        flex: 50%;
+        transform-origin: center;
+        background: url('texture/shattered-glass.png');
+        background-position: right;
+        background-size: cover;
+        overflow: hidden;
+      }
+      .full {
+        flex: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="webglviewer"></div>
+    <div id="shatter-container">
+      <div id="shatter-1" class="shatter"></div>
+      <div id="shatter-2" class="shatter"></div>
+    </div>
+
+    <script src="js/soundjs-0.6.2.min.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/physi.js"></script>
+    <script src="js/tween.js"></script>
+    <script src="js/StereoEffect.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/DeviceOrientationControls.js"></script>
+    <script src="js/stats.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
